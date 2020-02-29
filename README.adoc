@@ -123,7 +123,7 @@ After one done the first preliminary set up steps, then is the time to move forw
 
 In simple words allows calling built-in functions instead of writing complex queries.
 The Eloquent ORM includes *Laravel/Lumen* which provides a beautiful, simple *ActiveRecord* implementation for working with the database.
-Each database table has a corresponding *Model* which is used to interact with that table. Models allow you to query for data in your tables, as well as insert new records into the table. For example, one can say `Author::all()` to get all the blog books inside books table rather than writing `select * from books`. Where Author in `Author::all() is a`model`.
+Each database table has a corresponding *Model* which is used to interact with that table. Models allow you to query for data in your tables, as well as insert new records into the table. For example, one can say `Book::all()` to get all the blog books inside books table rather than writing `select * from books`. Where Book in `Book::all() is a`model`.
 
 Then to use *Eloquent* uncomment the `$app-&gt;withEloquent()`
 in your `bootstrap/app.php`
@@ -135,7 +135,7 @@ A *facade* class is a wrapper around a few classes serving a particular purpose 
 Then uncomment the `$app-&gt;withFacades()` call inside `bootstrap/app.php` file to use *Laravel Facade*.
 
 *6) Books*
-Then inside the *app* folder, will create `Author.php`. It is called a model in *MVC framework*.
+Then inside the *app* folder, will create `Book.php`. It is called a model in *MVC framework*.
 It will reflect *books table* inside database which has not been created yet Inside this model will have set some fillable `fields =&gt;name` and `gender` and `country`
 as all *Eloquent models* protect against mass-assignment by default. A *mass-assignment* vulnerability occurs when a user passes an unexpected HTTP parameter through a request, and that parameter changes a column in your database you did not expect
 
